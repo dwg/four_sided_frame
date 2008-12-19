@@ -4,7 +4,7 @@ require 'image_sizes/jpg'
 
 module ImageSize
   def self.dimensions image_path
-    image_path = File.join(Rails.root, 'public', 'images', image_path)
+    image_path = File.join(Rails.root, 'public', image_path)
     case image_type image_path
       when :png
         ImageSizes::Png.dimensions(image_path)
