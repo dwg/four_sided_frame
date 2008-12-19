@@ -2,7 +2,7 @@ four_sided_frame
 
 View helper to generate a four sided frame (e.g. a dropshadow) around an element.
 
-Based on http://www.positioniseverything.net/articles/dropshadows2.html
+Based on {Four Sided PNG Drop Shadows}[http://www.positioniseverything.net/articles/dropshadows2.html]
 
 == Usage
 In a view do:
