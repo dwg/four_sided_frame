@@ -1,4 +1,11 @@
+CHANGELOG
+four_sided_frame.gemspec
 README.rdoc
-lib/four_sided_frame.rb
-Rakefile
+init.rb
 Manifest
+lib/four_sided_frame.rb
+lib/image_size.rb
+lib/image_sizes/jpg.rb
+lib/image_sizes/gif.rb
+lib/image_sizes/png.rb
+Rakefile

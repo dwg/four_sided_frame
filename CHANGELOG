@@ -1,5 +1,7 @@
 *0.1.0* (December 19, 2008)
 
+* Updated gemspec and removed pkg
+
 * Added ability to override image base path
 
 * Initial implementation

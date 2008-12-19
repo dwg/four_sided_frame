@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Arni Einarsson"]
-  s.date = %q{2008-12-18}
+  s.date = %q{2008-12-19}
   s.description = %q{Generate a unique token with Active Record.}
   s.email = %q{arni.dwg@gmail.com}
-  s.extra_rdoc_files = ["README.rdoc", "lib/four_sided_frame.rb"]
-  s.files = ["README.rdoc", "lib/four_sided_frame.rb", "Rakefile", "Manifest", "four_sided_frame.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/four_sided_frame.rb", "lib/image_size.rb", "lib/image_sizes/jpg.rb", "lib/image_sizes/gif.rb", "lib/image_sizes/png.rb"]
+  s.files = ["CHANGELOG", "four_sided_frame.gemspec", "README.rdoc", "init.rb", "Manifest", "lib/four_sided_frame.rb", "lib/image_size.rb", "lib/image_sizes/jpg.rb", "lib/image_sizes/gif.rb", "lib/image_sizes/png.rb", "Rakefile"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/dwg/four_sided_frame}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Four_sided_frame", "--main", "README.rdoc"]
