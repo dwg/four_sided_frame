@@ -3,7 +3,7 @@ require 'rake'
 require 'echoe'
 
 Echoe.new('four_sided_frame', '0.1.0') do |p|
-  p.description    = "Generate a unique token with Active Record."
+  p.description    = "Rails four sided frame view helper."
   p.url            = "http://github.com/dwg/four_sided_frame"
   p.author         = "Arni Einarsson"
   p.email          = "arni.dwg@gmail.com"
