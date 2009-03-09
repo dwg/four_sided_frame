@@ -8,7 +8,8 @@ module FourSidedFrame
       :full_frame=>'full-frame.png',
       :bottom_left=>'bottom-left.png',
       :top_right=>'top-right.png',
-      :base_path=>'images'
+      :base_path=>'images',
+      :shrink_wrap=>:position
     }.merge(options)
     
     bl_dimensions = ImageSize.dimensions File.join(options[:base_path], options[:bottom_left])
@@ -16,6 +17,16 @@ module FourSidedFrame
     raise 'Corner image sizes not the same' unless bl_dimensions == tr_dimensions
     raise 'Corner images need to be square' unless bl_dimensions.first == bl_dimensions.last
     image_size = bl_dimensions.first
+    
+    shrink_wrap_style = case options[:shrink_wrap]
+                          when :left, :right
+                            "float: #{options[:shrink_wrap]}"
+                          when Number
+                            "width: #{options[:shrink_wrap]}px"
+                          else
+                            'position: absolute'
+                        end
+      
     
     concat content_tag(:div,
       content_tag(:div,
@@ -27,7 +38,7 @@ module FourSidedFrame
           :class=>'top-left', :style=>"position: relative; left: -#{image_size}px; top: -#{image_size}px; background: url(/#{options[:base_path]}/#{options[:full_frame]}) left top no-repeat"),
         :class=>'bottom-right', :style=>"background: url(/#{options[:base_path]}/#{options[:full_frame]}) right bottom no-repeat"),
       :class=>'bottom-left', :style=>"padding: #{image_size}px 0 0 #{image_size}px; background: url(/#{options[:base_path]}/#{options[:bottom_left]}) left bottom no-repeat"),
-    :class=>'top-right', :style=>"position: absolute; background: url(/#{options[:base_path]}/#{options[:top_right]}) right top no-repeat", :id=>options[:id]), block.binding
+    :class=>'top-right', :style=>"#{shrink_wrap_style}; background: url(/#{options[:base_path]}/#{options[:top_right]}) right top no-repeat", :id=>options[:id]), block.binding
   end
 end
 
