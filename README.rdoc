@@ -20,7 +20,8 @@ You can also override just the base path of the images, keeping the names the sa
  <% four_sided_frame :base_path=>File.join(*%w(images my_frame)) do %>
  	Your content here
  <% end %>
-This will load the images from public/images/my_frame/[top-right.png|bottom-left.png|full-frame.png].
+This will load the images from
+ public/images/my_frame/[top-right.png|bottom-left.png|full-frame.png].
 
 Currently png, gif and jpg are handled.
 
